@@ -1,0 +1,209 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    list-style-type: none;
+    font-family: 'Margarine';
+}
+
+body {
+    background: -webkit-gradient(linear, left top, right top, from(#4facfe), to(#00f2fe));
+    background: -o-linear-gradient(left, #4facfe, #00f2fe);
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+}
+
+section .bg {
+    border-radius: 10px;
+    background: -webkit-gradient(linear, left top, right top, from(#ffffff), color-stop(#f0f0f0), color-stop(#e0e0e0), to(#d0d0d0));
+    background: -o-linear-gradient(left, #ffffff, #f0f0f0, #e0e0e0, #d0d0d0);
+    background: linear-gradient(to right, #ffffff, #f0f0f0, #e0e0e0, #d0d0d0);
+}
+
+section .logo {
+    width: 150px;
+    height: 100px;
+    margin: 10px 0 0 10px;
+}
+
+.defaultBtn {
+    padding: 15px 30px;
+    border: none;
+    background: -webkit-gradient(linear, left top, right top, from(#4facfe), to(#00f2fe));
+    background: -o-linear-gradient(left, #4facfe, #00f2fe);
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: #fff;
+}
+
+.modal h1 {
+    font-size: 40px !important;
+    font-weight: 900 !important;
+}
+
+.modalForm .modal-body .inputImg .image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+}
+
+.modalForm .modal-body .inputImg {
+    margin: 40px 0;
+    position: relative;
+}
+
+.modalForm .modal-body .inputImg::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 110%;
+    background-color: #5f656536;
+}
+
+.choosePhoto label {
+    background: -webkit-gradient(linear, left top, right top, from(#005D9A), color-stop(#4ABDAC), to(#B8E0F9));
+    background: -o-linear-gradient(left, #005D9A, #4ABDAC, #B8E0F9);
+    background: linear-gradient(to right, #005D9A, #4ABDAC, #B8E0F9);
+    border: none;
+    padding: 5px 20px;
+    border-radius: 50px;
+}
+
+/* Input Line */
+
+.modal-body .inputContent {
+    margin: 5px 0;
+}
+
+#nameAlert,
+#ageAlert {
+    width: 81.5%;
+    margin-top: 70px;
+    margin-bottom: 0;
+}
+
+
+
+.modal-body .inputContent label {
+    width: 110px;
+}
+
+
+#displayNone {
+    z-index: -1;
+}
+
+
+#resetBtn {
+    padding: 7px 15px;
+    background: -webkit-gradient(linear, left top, right top, from(#333333), color-stop(#999999), to(#CCCCCC));
+    background: -o-linear-gradient(left, #333333, #999999, #CCCCCC);
+    background: linear-gradient(to right, #333333, #999999, #CCCCCC);
+}
+
+
+/* Search */
+
+.search .btn-search button {
+    padding: 8px 20px;
+    background: -webkit-gradient(linear, left top, right top, from(#447aa0), to(#114477));
+    background: -o-linear-gradient(left, #447aa0, #114477);
+    background: linear-gradient(to right, #447aa0, #114477);
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+#deleteAll button {
+    padding: 9px 20px;
+    background: -webkit-gradient(linear, left top, right top, from(#426883), to(#4ca3fa));
+    background: -o-linear-gradient(left, #426883, #4ca3fa);
+    background: linear-gradient(to right, #426883, #4ca3fa);
+}
+
+
+.search-input {
+    width: 66%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.search-input input {
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border: 1px solid #5f6565;
+    border-radius: 20px;
+    outline: none;
+    -webkit-transition: ease 0.4s;
+    -o-transition: ease 0.4s;
+    transition: ease 0.4s;
+}
+
+.search-input:hover {
+    width: 80%;
+}
+
+
+.search-input i {
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+}
+
+#deleteAll button {
+    width: 66% !important;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+/* Table */
+
+.tableInfo {
+    overflow-x: auto;
+}
+
+.tableInfo th {
+    background-color: #6595c9;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+
+.tableInfo tr td img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+
+.tableInfo .table td {
+    vertical-align: middle;
+}
+
+
+.clr {
+    clear: both;
+}

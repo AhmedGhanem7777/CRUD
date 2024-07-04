@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+
+
+    <!-- Link to the Font Awesome CSS for icons -->
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <!-- Link to the Bootstrap CSS framework for responsive design and pre-defined styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Link to the main CSS file for custom styles specific to this project -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="stylesheet" href="css/rwd.css">
+
+
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Margarine&family=Playwrite+ES+Deco:wght@100..400&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+
+<section class="m-lg-5 m-sm-2 px-lg-5">
+    <div class="px-lg-5">
+        <div class="bg shadow">
+            <!-- Satrt Modal -->
+            <div class="modalForm">
+                <div class="head d-flex align-items-center justify-content-center flex-column my-5">
+                    <img src="images/flamingtext__26068056772646949.png" class="logo" alt="Crud logo">
+                    <!-- Button trigger modal -->
+                    <button id="modalBtn" type="button" class="defaultBtn mt-3 rounded-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Add New User<i class="fa-solid fa-user-plus ms-2"></i>
+                    </button>
+                </div>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Fill The Form</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="inputImg">
+                                            <div class="content">
+                                                <div class="image">
+                                                    <img src="images/profile.png" id="profilePhoto" class="w-100" alt="">
+                                                </div>
+                                                <div class="choosePhoto text-center mt-3">
+                                                    <label id="photoBtn" for="inputPhoto" class="defaultBtn rounded-5">Choose Photo</label>
+                                                    <input class="d-none" id="inputPhoto" type="file" accept="image/jpeg, image/png, image/jpg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="inputContent d-flex align-items-center">
+                                            <label for="nameInput">Name&nbsp;<span class="text-danger">*</span> : </label>
+                                            <div class="input w-100 ms-2 d-flex align-items-center">
+                                                <input class="form-control" type="text" id="nameInput" placeholder="Enter Your Name">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="inputContent d-flex align-items-center">
+                                            <label for="ageInput">Age&nbsp;<span class="text-danger">*</span> : </label>
+                                            <div class="input w-100 ms-2 d-flex align-items-center">
+                                                <input class="form-control" type="number" id="ageInput" placeholder="Enter Your Age">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="inputContent d-flex align-items-center">
+                                            <label for="cityInput">City&nbsp;<span class="text-danger">*</span> : </label>
+                                            <div class="input w-100 ms-2 d-flex align-items-center">
+                                                <input class="form-control" type="text" id="cityInput" placeholder="Enter Your City">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="inputContent d-flex align-items-center">
+                                            <label for="emailInput">E-mail&nbsp;<span class="text-danger">*</span> : </label>
+                                            <div class="input w-100 ms-2 d-flex align-items-center">
+                                                <input class="form-control" type="email" id="emailInput"  placeholder="Enter Your Email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="inputContent d-flex align-items-center">
+                                            <label for="phoneInput">Phone&nbsp;<span class="text-danger">*</span> : </label>
+                                            <div class="input w-100 ms-2 d-flex align-items-center">
+                                                <input class="form-control" type="text" id="phoneInput" minlength="11" maxlength="11" placeholder="Enter Your Phone Number">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="inputContent d-flex align-items-center">
+                                            <label for="startDateInput">Start Date&nbsp;<span class="text-danger">*</span> : </label>
+                                            <div class="input w-100 ms-2 d-flex align-items-center">
+                                                <input class="form-control" type="date" id="startDateInput">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="resetBtn" type="reset" class="defaultBtn rounded-5">Reset</button>
+                            <button id="addBtn" type="submit" class="btn btn-primary rounded-5" data-bs-dismiss="modal">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- End Modal -->
+            
+            <!-- Start Search -->
+            <div class="search">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <div class="d-flex justify-content-center">
+                                <div class="search-input">
+                                    <input oninput="search(this.value)" id="searchInput" type="text" placeholder="Search by name . . .">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="btn-search my-3">
+                                <button onclick="getSearchMood(this.id)" id="searchName" class="defaultBtn w-100 rounded-5">Search by name</button>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="btn-search my-3">
+                                <button onclick="getSearchMood(this.id)" id="searchCity" class="defaultBtn w-100 rounded-5">Search by city</button>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div id="deleteAll" class="d-flex align-items-center justify-content-center">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Search -->
+
+            <!-- Start Table -->
+            <div class="tableInfo mt-5">
+                <table class="table table-hover text-center">
+                    <thead>
+                        <th>ID</th>
+                        <th>PICTURE</th>
+                        <th>NAME</th>
+                        <th>AGE</th>
+                        <th>CITY</th>
+                        <th>EMAIL</th>
+                        <th>PHONE</th>
+                        <th>START DATE</th>
+                        <th>ACTION</th>
+                    </thead>
+                    <tbody id="tableList"></tbody>
+                </table>
+            </div>
+            <!-- End Table -->
+        </div>
+    </div>
+</section>
+
+    <!-- Link to the Bootstrap JavaScript bundle, which includes Bootstrap's JavaScript plugins and dependencies (like Popper) -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- Link to the custom JavaScript file for functionality specific to this project -->
+    <script src="js/main.js"></script>
+</body>
+</html>
